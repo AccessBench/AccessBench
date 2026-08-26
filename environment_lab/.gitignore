@@ -1,0 +1,13 @@
+private_assets/
+sealed_packs/
+catalog/heldout.jsonl
+catalog/heldout_validation.json
+results_raw/
+results_sealed/
+.venv/
+*.egg-info/
+__pycache__/
+*.pyc
+
+# Regenerable 100 MB construction matrix; rebuild with: python -m accessbench_env generate --split public --out catalog/public.jsonl (digest checked in core_v2_manifest.json)
+catalog/public.jsonl

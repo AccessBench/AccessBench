@@ -1,0 +1,30 @@
+{
+  "attestation": {
+    "algorithm": "Ed25519",
+    "key_id": "bc46a5e54556f171df0c5ffbf7590767c46ce09e3c64cd1a5afb9b5f1bbbd35a",
+    "payload_sha256": "88067b42905f0e8c5184943ba058f90a99b4c5ac15c621035e5fe7cf1a4e4dcb",
+    "public_key": "vRHvpf52yL2TY9hKO9j3gfuI0nrZoNTipQna45pk5F8=",
+    "purpose": "accessbench-bank-review-v1",
+    "signature": "vYkIdVtvTarXDKKs3m3mQ2rc9kPl1wfYkrGSJ/Wxzwi4SOh1knvQpjTcxTefuOIBr8AgrOS7HFUkENMw2OdEBA=="
+  },
+  "payload": {
+    "case_n": 600,
+    "catalog_sha256": "2d7c8f8854fac28008b7cf074518d8b0caddd480aa15cbaec206b372ec623609",
+    "date": "2026-08-23",
+    "decision": "accept",
+    "exceptions": [],
+    "note": "",
+    "panel_id": "accessbench-core-v2-development-600",
+    "panel_status": "frozen-local-development",
+    "prompt_set_sha256": "4df53604f3900c737b56704a89b0997ad27394fb06a6eb284a9970c504aba611",
+    "record_type": "accessbench-bank-review-v1",
+    "review_method": "paper review by a named maintainer; collaborator review, not independent validation",
+    "reviewed_range": "1-600",
+    "reviewer": {
+      "name": "Jonas Tirona",
+      "role": "maintainer"
+    },
+    "trial_ids_sha256": "eccbabf5cc6bb96104fe4b6f82c6a107a152a244dcc3c6e9988668637ebbb952"
+  },
+  "record_type": "accessbench-bank-review-v1"
+}

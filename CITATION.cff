@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use AccessBench, cite it as below. The version field names the exact release; results are bound to the harness commit recorded in their own bundle."
+type: software
+title: "AccessBench: a fixed-bank benchmark for AI-agent data-access enforcement"
+authors:
+  - family-names: Mullin
+    given-names: PJ
+  - family-names: Tirona
+    given-names: Jonas
+version: 1.0.0
+date-released: 2026-08-26
+license: Apache-2.0
+repository-code: https://github.com/accessbench/accessbench
+abstract: "AccessBench holds the agent, tools, tasks and synthetic worlds constant and changes only the enforcement layer between the agent and the data. The same 600 fixed cases run once with no enforcement and once behind the enforcement input under test; a deterministic grader checks planted values at every governed boundary and whether the required business effect completed. Results are development-bank evidence, self-signed by the operator who ran them, and verifiable with one command."
+keywords:
+  - AI agents
+  - authorization
+  - data exfiltration
+  - benchmark
+  - AuthZEN

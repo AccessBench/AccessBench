@@ -1,0 +1,416 @@
+/* AccessBench dashboard.
+   Deliberately single-theme dark: this is an operations surface that runs on a
+   projector in a dim room. Every color is painted explicitly rather than
+   inherited.
+
+   Color system: a grey and black base. Text signals keep the classic status
+   colors (red for violations and blocks, green for contained/good) because
+   they are read as alarms. The burgundy gradient (scarlet edge,
+   claret, wine) is reserved for the family grid, where a leaked cell wears burgundy and a
+   held cell stays grey, and for the brand hairline and run affordance. Color
+   never carries meaning alone; every colored cell also carries its number and
+   its word. Leaked/held pair (claret vs grey) re-validated 2026-08-19: dE ~45
+   against the #141416 surface, distinct under all CVD types because the
+   pair differs in luminance and texture, not hue alone. */
+
+:root {
+  color-scheme: dark;
+
+  --plane: #0a0a0b;
+  --surface: #131315;
+  --panel: #1a1a1d;
+  --cell: #232326;
+  --ink: #f4f4f2;
+  --ink-2: #b9b9bd;
+  --muted: #7f7f85;
+  --grid: #2a2a2e;
+  --border: rgba(255, 255, 255, 0.08);
+
+  --critical: #d03b3b;
+  --serious: #ec835a;
+  --good: #0ca30c;
+
+  --scarlet: #c9364f;      /* scarlet edge (kept var name for compatibility) */
+  --claret: #a02347;    /* claret */
+  --wine: #6f1d3a;      /* wine */
+  --brand-grad: linear-gradient(135deg, #c9364f 0%, #a02347 52%, #6f1d3a 100%);
+  --brand-ink: #e3899a;      /* brand as a text color on dark */
+  --brand-ink-2: #c97f8f;    /* softer brand text, mid states */
+  --brand-tint: rgba(160, 35, 71, 0.12);
+  --on-brand: #fbeef1;       /* light ink on the gradient; dark ink on claret reads cheap */
+
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  /* Sharp transitional serif, between a newspaper face and a UI sans. New York
+     on Apple platforms, Charter elsewhere; numbers and code stay in the mono. */
+  --sans: ui-serif, "New York", Charter, "Iowan Old Style", Georgia, "Times New Roman", serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--plane);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ---------------------------------------------------------------- header */
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  padding: 14px 24px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* the one brand stroke: a burgundy hairline across the very top */
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2px;
+  background: var(--brand-grad);
+  opacity: 0.85;
+}
+
+h1 {
+  font-size: 16px;
+  margin: 0;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+  font-weight: 650;
+}
+
+h1 .sub {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: 0.1px;
+}
+
+.controls { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+
+select {
+  font-family: var(--sans);
+  font-size: 13px;
+  background: var(--panel);
+  color: var(--ink);
+  border: 1px solid var(--grid);
+  border-radius: 7px;
+  padding: 7px 10px;
+}
+select:focus-visible {
+  outline: none;
+  border-color: var(--claret);
+}
+
+/* ----------------------------------------------------------------- layout */
+
+main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 16px;
+  padding: 16px 24px 32px;
+  align-items: start;
+}
+
+@media (max-width: 1040px) { main { grid-template-columns: minmax(0, 1fr); } }
+
+section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+section > h2 {
+  margin: 0;
+  padding: 12px 16px;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+section > h2 .note { text-transform: none; letter-spacing: 0; font-weight: 400; }
+
+.full { grid-column: 1 / -1; }
+
+/* --------------------------------------------------------------- table */
+
+table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+th, td { text-align: right; padding: 9px 12px; border-bottom: 1px solid var(--grid); }
+th:last-child, td:last-child { padding-right: 22px; }
+th { color: var(--muted); font-weight: 600; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.6px; }
+th:first-child, td:first-child { text-align: left; }
+tbody tr:last-child td { border-bottom: none; }
+td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+td.defense-name { max-width: 230px; }
+td.defense-name .dn { font-family: var(--mono); font-size: 12px; color: var(--ink); display: block; }
+td.defense-name .dd {
+  display: block;
+  font-size: 10.5px;
+  color: var(--muted);
+  line-height: 1.45;
+  margin-top: 1px;
+}
+
+.ci { color: var(--muted); font-size: 10.5px; display: block; }
+
+/* zero recedes into grey; trouble wears the AccessBench purple. */
+.rate-bad { color: #e3899a; font-weight: 700; }
+.rate-mid { color: #c97f8f; font-weight: 700; }
+.rate-zero { color: var(--ink-2); font-weight: 600; }
+.pending { color: var(--muted); }
+
+.legend { padding: 11px 16px; color: var(--muted); font-size: 11px; border-top: 1px solid var(--border); line-height: 1.6; }
+.legend b { color: var(--ink-2); font-weight: 600; }
+
+/* ------------------------------------------------------------- heat (foot) */
+
+.heat { padding: 12px 16px 16px; overflow-x: auto; }
+/* fixed layout so the five defense columns split the width evenly */
+.heat table { min-width: 760px; table-layout: fixed; width: 100%; }
+.heat td, .heat th { text-align: center; padding: 0; border: none; }
+.heat th { padding: 6px 8px; }
+.heat th.fam { text-align: left; padding-right: 22px; width: 370px; }
+.heat th.fam .fn { display: block; font-size: 12px; font-weight: 650; color: var(--ink); letter-spacing: 0.2px; }
+.heat th.fam .fd {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 400;
+  color: var(--muted);
+  line-height: 1.45;
+  margin-top: 1px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.cell {
+  margin: 3px;
+  padding: 10px 4px;
+  border-radius: 7px;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid transparent;
+}
+.cell .word { display: block; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-top: 1px; }
+
+/* leaked: burgundy. held: quiet grey. partial: grey with a burgundy edge.
+
+   The burgundy reads as one continuous flow across the grid without anything
+   moving on scroll: every leaked cell shows its column's slice of a single
+   wide gradient (--slice, set per column by the renderer), anchored to the
+   element rather than the viewport. Over it sit tiling turbulence layers,
+   dark mottled patches and pale bubble rings with a fine grain, for the
+   dirty rusted-foil feel, and a near-unnoticeable rainbow wash. */
+.cell.leak {
+  color: var(--on-brand);
+  border-color: rgba(255, 255, 255, 0.14);
+  background-color: #a02347;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.03' numOctaves='3' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='table' tableValues='0 0 0.22 0 0.11 0'/%3E%3C/feComponentTransfer%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.11 0 0 0 0 0.03 0 0 0 0 0.06 0 0 0 1 0'/%3E%3C/filter%3E%3Cfilter id='b'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.09' numOctaves='2' seed='23' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='table' tableValues='0 0 0 0.11 0'/%3E%3C/feComponentTransfer%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.26 0'/%3E%3C/filter%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.04'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='320' height='320' filter='url(%23m)'/%3E%3Crect width='320' height='320' filter='url(%23b)'/%3E%3Crect width='320' height='320' filter='url(%23g)'/%3E%3C/svg%3E"),
+    linear-gradient(105deg, rgba(240,150,150,0.04) 0%, rgba(230,120,140,0.03) 40%, rgba(255,190,170,0.035) 100%),
+    linear-gradient(97deg, #d33d55 0%, #a02347 50%, #6b1c39 100%);
+  background-size: 320px 320px, 500% 100%, 500% 100%;
+  background-position: var(--tx, 0px) var(--ty, 0px), var(--slice, 0%) 0, var(--slice, 0%) 0;
+  background-repeat: repeat, no-repeat, no-repeat;
+}
+.cell.leak .word { opacity: 0.75; }
+.cell.part { background: var(--cell); color: var(--brand-ink-2); border-color: var(--claret); }
+.cell.safe { background: var(--cell); color: var(--ink-2); border-color: var(--grid); }
+.cell.safe .word { color: var(--muted); }
+.cell.none { background: transparent; color: var(--muted); border-color: var(--grid); border-style: dashed; }
+
+.fam-note { color: var(--muted); font-size: 11px; padding: 0 16px 14px; line-height: 1.6; }
+.fam-note code { color: var(--ink-2); font-family: var(--mono); }
+.heat .fam-note { padding: 14px 4px; }
+
+.limits { padding: 12px 16px 16px; color: var(--ink-2); font-size: 12px; }
+.limits li { margin-bottom: 6px; }
+.limits h3 { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.7px; color: var(--muted); margin: 0 0 8px; }
+
+.error {
+  margin: 12px 24px 0;
+  padding: 10px 14px;
+  border: 1px solid var(--critical);
+  border-left: 3px solid var(--critical);
+  border-radius: 9px;
+  background: rgba(208, 59, 59, 0.1);
+  color: #f0b4b4;
+  font-family: var(--mono);
+  font-size: 12px;
+  white-space: pre-wrap;
+}
+
+
+/* Landing page rule (PJ, 2026-08-19), not applied to this dashboard yet:
+   on the landing page the burgundy texture opacity varies with the score on the
+   colored (enforced) bars only, never on grey control bars. Higher leakage
+   means a less opaque texture, within a moderate range, and a bar at or
+   below 10% leakage renders clean with no texture. Interpretation to confirm
+   with PJ before building: opacity floor around 0.35, ceiling 1.0, linear
+   between 10% and 100% leakage. */
+
+/* ------------------------------------------------- the bottom line (foot) */
+
+.bl-wrap { padding: 18px 20px 20px; }
+
+.bl-legend { display: flex; gap: 18px; font-size: 11px; color: var(--ink-2); margin-bottom: 30px; }
+.bl-legend .swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  margin-right: 6px;
+  vertical-align: -1px;
+}
+.bl-legend .swatch.control { background: #8a8a93; }
+.bl-legend .swatch.enforced { background: var(--brand-grad); }
+
+.bl-chart { display: flex; gap: 12px; height: 250px; margin-bottom: 86px; }
+
+.bl-axis {
+  position: relative;
+  width: 26px;
+  height: 100%;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--muted);
+}
+.bl-tick { position: absolute; right: 2px; transform: translateY(50%); }
+
+.bl-plot {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  gap: 26px;
+  padding: 0 20px;
+  border-left: 1px solid var(--grid);
+  border-bottom: 1px solid var(--grid);
+}
+.bl-grid {
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-top: 1px dashed rgba(255, 255, 255, 0.06);
+}
+
+.bl-group { position: relative; height: 100%; display: flex; align-items: flex-end; }
+.bl-bars { display: flex; gap: 9px; height: 100%; align-items: flex-end; }
+
+.bl-slot { position: relative; width: 50px; height: 100%; }
+
+.bl-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 2px;
+  border-radius: 3px 3px 0 0;
+}
+.bl-bar.control { background: #8a8a93; }
+.bl-bar.enforced {
+  background-color: #a02347;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.03' numOctaves='3' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='table' tableValues='0 0 0.22 0 0.11 0'/%3E%3C/feComponentTransfer%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.11 0 0 0 0 0.03 0 0 0 0 0.06 0 0 0 1 0'/%3E%3C/filter%3E%3Cfilter id='b'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.09' numOctaves='2' seed='23' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='table' tableValues='0 0 0 0.11 0'/%3E%3C/feComponentTransfer%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.26 0'/%3E%3C/filter%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.04'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='320' height='320' filter='url(%23m)'/%3E%3Crect width='320' height='320' filter='url(%23b)'/%3E%3Crect width='320' height='320' filter='url(%23g)'/%3E%3C/svg%3E"),
+    linear-gradient(105deg, rgba(240,150,150,0.04) 0%, rgba(230,120,140,0.03) 40%, rgba(255,190,170,0.035) 100%),
+    linear-gradient(97deg, #d33d55 0%, #a02347 50%, #6b1c39 100%);
+  background-size: 320px 320px, 100% 100%, 100% 100%;
+  background-repeat: repeat, no-repeat, no-repeat;
+}
+
+.bl-val {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--ink);
+  white-space: nowrap;
+  text-align: center;
+}
+.bl-val small {
+  display: block;
+  margin-top: 1px;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.bl-model {
+  position: absolute;
+  top: calc(100% + 9px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink);
+  text-align: center;
+  white-space: nowrap;
+}
+.bl-model { max-width: 165px; white-space: normal; line-height: 1.25; }
+.bl-model .bl-sub { display: block; font-size: 10.5px; color: var(--ink-2);
+  font-family: var(--sans); margin-top: 3px; overflow-wrap: normal; }
+
+.bl-takeaway {
+  margin: 16px 0 8px;
+  max-width: 900px;
+  text-align: left;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.bl-takeaway b { color: var(--ink); font-weight: 650; font-family: inherit; font-size: inherit; }
+.bl-takeaway b.held { color: var(--brand-ink-2); }
+.bl-fineprint { text-align: left; color: var(--muted); font-size: 11px; margin: 0 0 2px; }
+
+/* ------------------------------------------------------------ run browser */
+.ctl-label { font-family: var(--mono); font-size: 11px; color: var(--muted); margin-right: 6px; }
+#runpick { min-width: 380px; max-width: 60vw; }
+.badge {
+  font-family: var(--mono); font-size: 10.5px; padding: 3px 8px; border-radius: 3px;
+  border: 1px solid var(--border); color: var(--ink-2); background: var(--panel);
+}
+.badge.ok { border-color: var(--good); color: #9fe0a3; }
+.badge.dev { border-color: var(--claret); color: var(--brand-ink); }
+.badge.legacy { border-color: #4a4a52; color: var(--muted); }
+.devtag {
+  display: inline-block; margin-left: 6px; padding: 1px 6px; border-radius: 3px;
+  font-family: var(--mono); font-size: 9px; letter-spacing: 0.02em;
+  border: 1px solid var(--claret); color: var(--brand-ink-2); vertical-align: 1px;
+}
+.num .ci.thin { display: block; color: var(--brand-ink-2); font-size: 9.5px; }
+
+
+/* --------------------------------------------------- headline strip (demo) */
+.hl { display: flex; gap: 14px; padding: 4px 2px 2px; flex-wrap: wrap; }
+.hlcell { flex: 1 1 220px; padding: 14px 16px; background: var(--panel);
+          border: 1px solid var(--border); border-radius: 6px; }
+.hlk { font-family: var(--sans); font-size: 12px; color: var(--ink-2);
+       letter-spacing: 0.01em; margin-bottom: 6px; }
+.hlrow { display: flex; align-items: baseline; gap: 10px; }
+.hlbig { font-family: var(--mono); font-size: 30px; font-weight: 700; color: var(--ink); }
+.hlbig.hlgood { color: var(--brand-ink); }
+.hlarrow { font-size: 18px; color: var(--muted); }
+.hlsub { margin-top: 5px; font-family: var(--sans); font-size: 11px; color: var(--muted); }

@@ -1,0 +1,37 @@
+name: Reproduction failure
+description: The demo, a run, or accessbench verify did not do what the docs say
+labels: ['reproduction']
+body:
+  - type: markdown
+    attributes:
+      value: Please search past issues first. Do not paste API keys, signing keys, or scored-bank content.
+  - type: textarea
+    attributes:
+      label: Commit or tag, operating system, Python version
+      placeholder: |
+        git rev-parse HEAD, or the tag; macOS 15 / Ubuntu 24.04; python3 --version
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Exact command you ran
+      placeholder: |
+        ```bash
+        accessbench demo
+        accessbench run --model MODEL --enforcement benchmark
+        accessbench verify /path/to/results/<dir>
+        ```
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What happened, including the full output
+      placeholder: The complete terminal output, or VERIFY.txt and the verify output for a bundle.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What you expected, and which document said so
+      placeholder: The docs page and sentence you were following.
+    validations:
+      required: true

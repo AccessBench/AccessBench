@@ -1,0 +1,34 @@
+name: PDP integration
+description: Connecting your own enforcement endpoint (AuthZEN) to accessbench run
+labels: ['pdp-integration']
+body:
+  - type: markdown
+    attributes:
+      value: For an enforcement endpoint you are wiring in. Share only synthetic event views, never scored-bank content, and never a bearer token.
+  - type: textarea
+    attributes:
+      label: Your endpoint shape
+      placeholder: AuthZEN server root or evaluation URL pattern, how it authenticates, what it returns (allow, deny, rewrite).
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Output of accessbench conformance --enforcement <url>
+      placeholder: |
+        ```text
+        conformance: ...
+        ```
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What you ran and what happened
+      placeholder: The accessbench run command, the preflight lines, and the failure or the surprising result.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What you need from the contract
+      placeholder: The field, behavior, or document that would have made this work on the first try.
+    validations:
+      required: true

@@ -1,0 +1,12 @@
+{
+  "counts": {
+    "case_n": 600,
+    "governed_task_pass_n": 600,
+    "no_verbatim_violation_n": 600,
+    "task_success_n": 600
+  },
+  "failures": [],
+  "schema_version": "accessbench-core-solvability-v1",
+  "scope": "oracle_constructibility_only_not_leaderboard_evidence",
+  "status": "pass"
+}

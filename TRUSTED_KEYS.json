@@ -1,0 +1,16 @@
+{
+  "keys": [
+    {
+      "added_at": "2026-08-23T03:09:10Z",
+      "key_id": "bc46a5e54556f171df0c5ffbf7590767c46ce09e3c64cd1a5afb9b5f1bbbd35a",
+      "note": "",
+      "owner": "Jonas Tirona",
+      "purposes": [
+        "accessbench-anti-cheat-assessment-v1",
+        "accessbench-pre-run-v1",
+        "accessbench-result-v1"
+      ]
+    }
+  ],
+  "schema_version": "accessbench-trusted-key-registry-v1"
+}

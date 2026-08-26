@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 372" width="900" height="372" role="img" aria-label="Twenty five leak types by six workflows makes 150 workflows; four request surfaces each makes 600 cases">
+<title>Twenty five leak types by six workflows makes 150 workflows; four request surfaces each makes 600 cases</title>
+<style>
+:root{--ab-ink:#14141a;--ab-ink2:#45454e;--ab-muted:#6b6b75;--ab-faint:#8a8a93;--ab-grid:#d5d5dc;--ab-line:#a0a0aa;--ab-arrowmuted:#b0b0ba;--ab-panel:#f7f7f9;--ab-panel2:#f1f1f4;--ab-inputbg:#f4f4f7;--ab-inputst:#d2d2da;--ab-testbg:#fcf1f4;--ab-testst:#d59cac;--ab-passbg:#f0f8f1;--ab-passst:#9fcda3;--ab-sealedbg:#e9e9ef;--ab-sealedst:#c4c4ce;--ab-outbg:#f5f5f8;--ab-outst:#bcbcc6;--ab-chipbg:#eeeef2;--ab-chipst:#d5d5dd;--ab-chiptestbg:#fbeef1;--ab-chippassbg:#eef7ef;--ab-chipsealbg:#e7e7ed;--ab-chipsealst:#c8c8d2;--ab-scarlet:#a02347;--ab-brandtx:#8f1f3f;--ab-good:#128012;--ab-goodtx:#14761a;--ab-ctrlbar:#9a9aa4;--ab-stackbg:#eeeef2;--ab-stackst:#ccccd6;--ab-gridread:#c6c6ce;--ab-gridegress:#8e8e9a;--ab-agent:#1f7a4d;--ab-brandred:#c9364f;--ab-room:#1b1b21;--ab-face:#e6e6eb;--ab-faceedge:#b9b9c4;--ab-celllit:#9a9aa6;--ab-cellblack:#0f0f13;--ab-cellblkedge:#5a5a66;--ab-framefill:#dcdce3;--ab-frameedge:#aeaeba;--ab-slab:#d4d4dc;--ab-slabedge:#a8a8b4;--ab-rail:#dcdce3;--ab-hinge:#9a9aa6;--ab-handle:#7a7a86;--ab-roomA:#15151b;--ab-roomB:#24242c;--ab-roomC:#35353f;--ab-reveal:#44444f;}
+@media (prefers-color-scheme:dark){:root{--ab-ink:#f4f4f2;--ab-ink2:#b9b9bd;--ab-muted:#83838b;--ab-faint:#6e6e77;--ab-grid:#2a2a2e;--ab-line:#4a4a52;--ab-arrowmuted:#5c5c65;--ab-panel:#16161a;--ab-panel2:#141418;--ab-inputbg:#141419;--ab-inputst:#3a3a42;--ab-testbg:#1c1319;--ab-testst:#7d2038;--ab-passbg:#101a11;--ab-passst:#245c28;--ab-sealedbg:#060607;--ab-sealedst:#2f2f36;--ab-outbg:#17171c;--ab-outst:#4a4a52;--ab-chipbg:#1d1d23;--ab-chipst:#3a3a44;--ab-chiptestbg:#22141a;--ab-chippassbg:#111b12;--ab-chipsealbg:#0b0b0d;--ab-chipsealst:#33333c;--ab-scarlet:#c9364f;--ab-brandtx:#e3899a;--ab-good:#0ca30c;--ab-goodtx:#5fbf5f;--ab-ctrlbar:#8a8a93;--ab-stackbg:#1d1d23;--ab-stackst:#3f3f4a;--ab-gridread:#3d3d47;--ab-gridegress:#7d7d8b;--ab-agent:#34a06a;--ab-brandred:#c9364f;--ab-room:#08080c;--ab-face:#2c2c36;--ab-faceedge:#5a5a67;--ab-celllit:#dcdce0;--ab-cellblack:#08080a;--ab-cellblkedge:#4d4d59;--ab-framefill:#262630;--ab-frameedge:#3e3e4a;--ab-slab:#2b2b33;--ab-slabedge:#4a4a56;--ab-rail:#33333d;--ab-hinge:#5b5b66;--ab-handle:#b9b9bd;--ab-roomA:#050506;--ab-roomB:#0c0c10;--ab-roomC:#17171d;--ab-reveal:#24242c;}}
+</style>
+<defs><linearGradient id="brandgrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--ab-scarlet)"/><stop offset="1" stop-color="var(--ab-brandtx)"/></linearGradient><marker id="ah-ink" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6.4" markerHeight="6.4" orient="auto-start-reverse"><path d="M0 0.7 L9.6 5 L0 9.3 Z" style="fill:var(--ab-line)"/></marker><marker id="ah-scarlet" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6.4" markerHeight="6.4" orient="auto-start-reverse"><path d="M0 0.7 L9.6 5 L0 9.3 Z" style="fill:var(--ab-scarlet)"/></marker><marker id="ah-good" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6.4" markerHeight="6.4" orient="auto-start-reverse"><path d="M0 0.7 L9.6 5 L0 9.3 Z" style="fill:var(--ab-good)"/></marker><marker id="ah-agent" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6.4" markerHeight="6.4" orient="auto-start-reverse"><path d="M0 0.7 L9.6 5 L0 9.3 Z" style="fill:var(--ab-agent)"/></marker><marker id="ah-brandred" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6.4" markerHeight="6.4" orient="auto-start-reverse"><path d="M0 0.7 L9.6 5 L0 9.3 Z" style="fill:var(--ab-brandred)"/></marker><marker id="ah-muted" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6.4" markerHeight="6.4" orient="auto-start-reverse"><path d="M0 0.7 L9.6 5 L0 9.3 Z" style="fill:var(--ab-arrowmuted)"/></marker><marker id="ah-ink2" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="6.4" markerHeight="6.4" orient="auto-start-reverse"><path d="M0 0.7 L9.6 5 L0 9.3 Z" style="fill:var(--ab-ink2)"/></marker></defs>
+<rect x="40" y="30" width="48" height="2.5" rx="1.25" fill="url(#brandgrad)"/>
+<text x="40.0" y="58.0" font-family="Charter, 'Charter BT', 'Bitstream Charter', 'Charis SIL', ui-serif, Georgia, serif" font-size="15.5" font-weight="600" text-anchor="start" letter-spacing="0.2" style="fill:var(--ab-ink)">The shape of the bank</text>
+<text x="40.0" y="75.0" font-family="Charter, 'Charter BT', 'Bitstream Charter', 'Charis SIL', ui-serif, Georgia, serif" font-size="11.4" font-weight="400" text-anchor="start" style="fill:var(--ab-muted)">Diversity comes from the workflows. The surfaces are a controlled axis.</text>
+<rect x="78.0" y="126.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="78.0" y="146.4" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="78.0" y="166.8" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="78.0" y="187.2" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="78.0" y="207.6" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="78.0" y="228.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="94.4" y="126.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="94.4" y="146.4" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="94.4" y="166.8" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="94.4" y="187.2" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="94.4" y="207.6" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="94.4" y="228.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="110.8" y="126.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="110.8" y="146.4" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="110.8" y="166.8" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="110.8" y="187.2" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="110.8" y="207.6" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="110.8" y="228.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="127.2" y="126.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="127.2" y="146.4" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="127.2" y="166.8" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="127.2" y="187.2" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="127.2" y="207.6" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="127.2" y="228.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="143.6" y="126.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="143.6" y="146.4" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="143.6" y="166.8" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="143.6" y="187.2" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="143.6" y="207.6" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="143.6" y="228.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="160.0" y="126.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="160.0" y="146.4" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="160.0" y="166.8" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="160.0" y="187.2" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="160.0" y="207.6" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="160.0" y="228.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="176.4" y="126.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="176.4" y="146.4" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="176.4" y="166.8" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="176.4" y="187.2" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="176.4" y="207.6" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="176.4" y="228.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="192.8" y="126.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="192.8" y="146.4" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="192.8" y="166.8" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="192.8" y="187.2" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="192.8" y="207.6" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="192.8" y="228.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="209.2" y="126.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="209.2" y="146.4" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="209.2" y="166.8" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="209.2" y="187.2" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="209.2" y="207.6" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="209.2" y="228.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="225.6" y="126.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="225.6" y="146.4" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="225.6" y="166.8" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="225.6" y="187.2" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="225.6" y="207.6" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="225.6" y="228.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="242.0" y="126.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="242.0" y="146.4" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="242.0" y="166.8" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="242.0" y="187.2" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="242.0" y="207.6" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="242.0" y="228.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="258.4" y="126.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="258.4" y="146.4" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="258.4" y="166.8" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="258.4" y="187.2" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="258.4" y="207.6" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="258.4" y="228.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="274.8" y="126.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="274.8" y="146.4" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="274.8" y="166.8" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="274.8" y="187.2" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="274.8" y="207.6" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="274.8" y="228.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="291.2" y="126.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="291.2" y="146.4" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="291.2" y="166.8" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="291.2" y="187.2" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="291.2" y="207.6" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="291.2" y="228.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="307.6" y="126.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="307.6" y="146.4" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="307.6" y="166.8" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="307.6" y="187.2" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="307.6" y="207.6" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="307.6" y="228.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridread)"/>
+<rect x="324.0" y="126.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="324.0" y="146.4" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="324.0" y="166.8" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="324.0" y="187.2" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="324.0" y="207.6" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="324.0" y="228.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="340.4" y="126.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="340.4" y="146.4" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="340.4" y="166.8" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="340.4" y="187.2" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="340.4" y="207.6" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="340.4" y="228.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="356.8" y="126.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="356.8" y="146.4" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="356.8" y="166.8" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="356.8" y="187.2" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="356.8" y="207.6" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="356.8" y="228.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="373.2" y="126.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="373.2" y="146.4" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="373.2" y="166.8" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="373.2" y="187.2" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="373.2" y="207.6" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="373.2" y="228.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="389.6" y="126.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="389.6" y="146.4" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="389.6" y="166.8" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="389.6" y="187.2" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="389.6" y="207.6" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="389.6" y="228.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="406.0" y="126.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="406.0" y="146.4" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="406.0" y="166.8" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="406.0" y="187.2" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="406.0" y="207.6" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="406.0" y="228.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="422.4" y="126.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="422.4" y="146.4" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="422.4" y="166.8" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="422.4" y="187.2" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="422.4" y="207.6" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="422.4" y="228.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="438.8" y="126.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="438.8" y="146.4" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="438.8" y="166.8" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="438.8" y="187.2" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="438.8" y="207.6" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="438.8" y="228.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="455.2" y="126.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="455.2" y="146.4" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="455.2" y="166.8" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="455.2" y="187.2" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="455.2" y="207.6" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="455.2" y="228.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="471.6" y="126.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="471.6" y="146.4" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="471.6" y="166.8" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="471.6" y="187.2" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="471.6" y="207.6" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="471.6" y="228.0" width="13.0" height="17.0" rx="2.5" style="fill:var(--ab-gridegress)"/>
+<rect x="67.0" y="115.0" width="428.6" height="141.0" rx="8" style="fill:none;stroke:var(--ab-scarlet);stroke-width:1"/>
+<text x="281.3" y="105.0" font-family="Charter, 'Charter BT', 'Bitstream Charter', 'Charis SIL', ui-serif, Georgia, serif" font-size="11.4" font-weight="400" text-anchor="middle" style="fill:var(--ab-brandtx)">150 workflows, independently grounded</text>
+<text x="50.0" y="185.5" font-family="Charter, 'Charter BT', 'Bitstream Charter', 'Charis SIL', ui-serif, Georgia, serif" font-size="11" style="fill:var(--ab-muted)" text-anchor="middle" transform="rotate(-90 50.0 185.5)">6 workflows</text>
+<line x1="322.3" y1="261.0" x2="322.3" y2="291.0" style="stroke:var(--ab-arrowmuted);stroke-width:1;stroke-linecap:round"/>
+<text x="200.2" y="279.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10.4" font-weight="400" text-anchor="middle" style="fill:var(--ab-faint)">15 bind on read</text>
+<text x="403.4" y="279.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10.4" font-weight="400" text-anchor="middle" style="fill:var(--ab-ink2)">10 bind on egress</text>
+<text x="281.3" y="301.0" font-family="Charter, 'Charter BT', 'Bitstream Charter', 'Charis SIL', ui-serif, Georgia, serif" font-size="11.4" font-weight="400" text-anchor="middle" style="fill:var(--ab-muted)">25 leak types</text>
+<line x1="510.6" y1="185.5" x2="558.6" y2="185.5" style="stroke:var(--ab-line);stroke-width:1.5;stroke-linecap:round" marker-end="url(#ah-ink)"/>
+<rect x="591.6" y="153.0" width="96.0" height="74.0" rx="6" style="fill:var(--ab-stackbg);stroke:var(--ab-stackst);stroke-width:1"/>
+<rect x="584.6" y="146.0" width="96.0" height="74.0" rx="6" style="fill:var(--ab-stackbg);stroke:var(--ab-stackst);stroke-width:1"/>
+<rect x="577.6" y="139.0" width="96.0" height="74.0" rx="6" style="fill:var(--ab-stackbg);stroke:var(--ab-stackst);stroke-width:1"/>
+<rect x="570.6" y="132.0" width="96.0" height="74.0" rx="6" style="fill:var(--ab-stackbg);stroke:var(--ab-stackst);stroke-width:1"/>
+<text x="632.6" y="279.0" font-family="Charter, 'Charter BT', 'Bitstream Charter', 'Charis SIL', ui-serif, Georgia, serif" font-size="11.4" font-weight="400" text-anchor="middle" style="fill:var(--ab-muted)">4 request surfaces</text>
+<text x="632.6" y="301.0" font-family="Charter, 'Charter BT', 'Bitstream Charter', 'Charis SIL', ui-serif, Georgia, serif" font-size="10.4" font-weight="400" text-anchor="middle" style="fill:var(--ab-faint)">same work, asked four ways</text>
+<text x="40.0" y="322.0" font-family="Charter, 'Charter BT', 'Bitstream Charter', 'Charis SIL', ui-serif, Georgia, serif" font-size="15.5" font-weight="600" text-anchor="start" style="fill:var(--ab-ink)">= 600 scored cases</text>
+<text x="210.0" y="322.0" font-family="Charter, 'Charter BT', 'Bitstream Charter', 'Charis SIL', ui-serif, Georgia, serif" font-size="11.4" font-weight="400" text-anchor="start" style="fill:var(--ab-muted)">300 allowed and 300 forbidden, 24 cases per leak type.</text>
+</svg>

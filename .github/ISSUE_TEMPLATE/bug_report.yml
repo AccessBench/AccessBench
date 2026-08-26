@@ -1,0 +1,26 @@
+name: Bug report
+description: Something in the harness does not work
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: Please search past issues before filing. Security issues go through SECURITY.md, not here.
+  - type: textarea
+    attributes:
+      label: Describe the bug
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        ```bash
+        accessbench ...
+        ```
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Commit or tag, operating system, Python version
+    validations:
+      required: true

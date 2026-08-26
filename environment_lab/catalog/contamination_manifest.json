@@ -1,0 +1,39 @@
+{
+  "heldout": {
+    "oracle_versions": [
+      "verbatim-flow-oracle-v2"
+    ],
+    "path": "withheld",
+    "prompt_n": 900,
+    "scenario_versions": [
+      "environment-lab-scenarios-v5"
+    ],
+    "sha256": "97a8ef7beb5fc911af5d3e0695e48478e92de47be1b02ce30d603d4d5e1ce8d3",
+    "trial_n": 10800
+  },
+  "public": {
+    "oracle_versions": [
+      "verbatim-flow-oracle-v2"
+    ],
+    "path": "public.jsonl",
+    "prompt_n": 900,
+    "scenario_versions": [
+      "environment-lab-scenarios-v5"
+    ],
+    "seed_commitment": [
+      "2e5de75bbe1e896512c0f9c7a94ad3dd7366128cb1373bfab023fb561919553e"
+    ],
+    "sha256": "cc3229f16b634103d6339194fb18ef6694b517da17ccf4c9c65846c9b2778e33",
+    "trial_n": 10800
+  },
+  "release_rule": "Do not publish heldout prompts, worlds, seed material, private phrase banks, or plaintext asset digests.",
+  "schema_version": "contamination-manifest-v3",
+  "split_validation": {
+    "failures": [],
+    "ok": true,
+    "prompt_disjoint": true,
+    "seed_disjoint": true,
+    "structural_coverage_identical": true,
+    "world_disjoint": true
+  }
+}

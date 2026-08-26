@@ -1,0 +1,23 @@
+# Everything private lives under exactly one directory.
+internal/
+
+# The private held-out split and its seed never leave this machine.
+private/
+environment_lab/private_assets/
+
+# Local build products and run artifacts.
+.env
+vendor/
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+.eval-venv/
+.pytest_cache/
+results/
+results_raw/
+build/
+.DS_Store
+.claude/
+plan.md
+dashboard/static/_backup_newdesign_2026-08-19/
