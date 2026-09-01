@@ -256,7 +256,8 @@ contract is `accessbench_env/anti_cheat.py`, coordination is
 
 The scored prompts, worlds, protected-value material, hidden assignments,
 grader fixtures, Judge prompt, and calibration cases are private operating
-assets. Production packs use managed KMS envelope encryption (a sealed pack):
+assets. Production packs are designed to use managed KMS envelope encryption
+(a sealed pack), a code path that exists but is not in use:
 a trusted controller decrypts one record at a time, runs it in isolation,
 captures signed evidence, then discards the plaintext. The runner accepts a
 sealed pack through `ACCESSBENCH_SEALED_CATALOG` and refuses one that is not a
@@ -269,7 +270,8 @@ exposure tracking, and pack rotation. The local development bank is an
 engineering asset, not enterprise leaderboard evidence, because it is
 plaintext and reviewed only by the maintainers; a sealed pack with an
 independent review is the later track (a managed-KMS code path for storing
-one exists, optional and not operational). Replication procedure is in
+one exists, optional and not operational; no cloud account or key has been
+provisioned). Replication procedure is in
 [10-replication.md](10-replication.md).
 
 ## What a result means

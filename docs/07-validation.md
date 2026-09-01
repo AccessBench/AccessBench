@@ -19,7 +19,9 @@ The panel, no-enforcement arm, single pass over the bank, decoding settings,
 concurrency, seed, turn limit, and output path are fixed protocol machinery. Model transport,
 credentials, optional immutable revision, sealed-pack location, KMS role, and
 evidence-signing key are evaluator infrastructure supplied through the
-environment. They are recorded, not scored as additional inputs.
+environment. They are recorded, not scored as additional inputs. The
+sealed-pack and KMS settings belong to the later sealed track and are unused
+today.
 
 Before a real run, an enforcement input should pass the conformance check,
 which sends only synthetic event views and reports contract conformance
@@ -169,12 +171,16 @@ A comparable result requires all of the following:
     and evidence digest; the frozen Judge bundle is bound; and every dismissal
     carries a separately trusted reviewer attestation.
 
-Aggregation reads trusted Anti-Cheat signer IDs from `TRUSTED_KEYS.json`
-(the trusted-key registry; see `accessbench-env trust add-key` / `trust
-list`), plus `ACCESSBENCH_TRUSTED_ANTI_CHEAT_KEY_IDS` as an additive
-override. This is evaluator infrastructure, not a benchmark input.
+Aggregation reads trusted Anti-Cheat signer IDs from a `TRUSTED_KEYS.json`
+at the repository root when one exists (the trusted-key registry; see
+`accessbench-env trust add-key` / `trust list`), plus
+`ACCESSBENCH_TRUSTED_ANTI_CHEAT_KEY_IDS` as an additive override. This
+repository ships no registry file, so today the env var is the only source of
+trust. This is evaluator infrastructure, not a benchmark input.
 
-For a sealed run, aggregation requires both the original ciphertext via
+No sealed run has been performed; the following describes the retained code
+path for the later sealed track. For a sealed run, aggregation requires both
+the original ciphertext via
 `--sealed-catalog` and the evaluator-only plaintext oracle panel via `--catalog`.
 It verifies the manifest and raw-record digest against the ciphertext, requires
 every opaque record handle exactly once, proves one plaintext trial per handle,

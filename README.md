@@ -150,15 +150,17 @@ sparse-label cases in every model. That batch is summarized at
 [accessbench.io](https://accessbench.io). It is single-pass evidence from an
 unfrozen harness and is not yet part of this repository's results of record.
 
-## Signing keys
+## Signing keys and what is not in use yet
 
-`TRUSTED_KEYS.json` at the repository root is the maintainer-controlled
-registry of signing keys (`accessbench trust list` prints it). It is not a
-held-out bank and not independent validation. A result signed by a key that is
-not listed still verifies with `accessbench verify` and scores identically; the
-listing only records, in git, which keys the maintainers admitted, so that
-history is tamper-evident. No sealed or held-out evaluation bank exists; see
-[08. Limits](docs/08-limits.md).
+Every result is signed by the key of the operator who ran it. This repository
+ships no trusted-key registry: no `TRUSTED_KEYS.json`, no admitted keys. The
+registry mechanism (`accessbench trust add-key` / `trust list`) stays in the
+code for the day an outside party holds part of it; until then `accessbench
+run --full` prints that your key is not in the registry, which is expected for
+every run and changes nothing about the scores. The sealed evaluation bank and
+its managed-KMS encryption (`sealed_assets.py`, the `kms-aws` extra) are also
+a later track: no cloud account, key, or sealed pack exists, and nothing in
+the current protocol uses AWS. See [08. Limits](docs/08-limits.md).
 
 ## Citation
 

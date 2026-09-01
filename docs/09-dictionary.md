@@ -517,9 +517,10 @@ every result cell becomes ineligible for publication.
 
 **KMS envelope encryption.** Managed-key wrapping of a per-pack data key so
 sealed assets can be decrypted one record at a time.
-`accessbench_env/sealed_assets.py`. Optional dependency (`boto3`). Not
-currently exposed through the CLI; the corpus stays public/development while
-a private corpus is built separately.
+`accessbench_env/sealed_assets.py`. Optional dependency (`boto3`, the
+`kms-aws` extra, not in the default install). Not currently exposed through
+the CLI and not in use; the corpus stays public/development while a private
+corpus is built separately.
 
 **manifest.** The JSON sidecar `<raw>.manifest.json` frozen at run start and
 completed at run end: model, revision, catalog digest, panel ID, code

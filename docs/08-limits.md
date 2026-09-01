@@ -152,7 +152,10 @@ that consults more than the request can close them.
 
 - KMS and sealed-record code exists, but no owner-controlled production key,
   workload role, audit-log review, isolated evaluator, or active v5 sealed pack
-  has completed end-to-end verification.
+  has completed end-to-end verification. Nothing in the current protocol uses
+  AWS or any cloud key service.
+- No trusted-key registry ships with this repository (no `TRUSTED_KEYS.json`);
+  every result so far is self-signed by the operator who ran it.
 - Passing AccessBench is not a compliance certification and does not prove a
   product secure outside the exact configuration and method version tested.
 - No external model, enforcement product, or organization is described as

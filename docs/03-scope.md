@@ -293,7 +293,7 @@ AccessBench has three release surfaces:
   probes.
 - The private local development bank lets maintainers build, validate, and
   debug the full 600-case method. Its content cannot support a published claim.
-- The sealed evaluation bank uses the same structural contract with
+- The sealed evaluation bank, not yet built, will use the same structural contract with
   independently authored prompts, fresh synthetic values, a hidden fixed case
   assignment, and a managed KMS encrypted asset. The pack ships to the
   organization running the benchmark and is decrypted one case at a time by
@@ -310,7 +310,8 @@ rests on pack rotation and exposure tracking, not on the case text staying
 inside this project. `08-limits.md` must state that without softening it.
 
 The current KMS code path supports envelope encryption and selective record
-decryption. An active enterprise pack is not ready until the maintainer
+decryption but is not in use; no cloud account exists and the `boto3`
+dependency is an opt-in extra. An active enterprise pack is not ready until the maintainer
 completes the cloud account, key, runtime-role, and audit-log steps and the
 resulting sealed pack passes the operational tests in `06-integrity.md`.
 

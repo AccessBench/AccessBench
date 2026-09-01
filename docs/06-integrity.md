@@ -92,6 +92,10 @@ sealed track, not to v1.
 | Key material | encryption, signing, reviewer, commitment keys | never publish | managed KMS, HSM, or protected mode-0600 operator store |
 | Raw evidence | transcripts, event traces, decision receipts, reviewer notes | approved evaluator and Anti-Cheat operator only | encrypted retention-controlled store |
 
+The "active sealed content" row and the managed-KMS storage rules describe
+the later sealed track; no sealed content or managed key exists today, and the
+development bank is plaintext under Apache 2.0.
+
 Provider API keys are transport credentials. They must never encrypt packs,
 derive protected values, sign results, or establish benchmark trust.
 

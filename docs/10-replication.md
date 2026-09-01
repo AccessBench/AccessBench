@@ -376,13 +376,14 @@ What a PASS proves: the scores follow from the raw evidence, the digests
 match, and nothing in the bundle was modified after the run was signed. What
 it does not prove: that the operator ran the protocol honestly, or that anyone
 else has validated the result. The key in the manifest is the operator's own.
-`TRUSTED_KEYS.json` (`accessbench-env trust add-key` / `trust list`) is now
-the trusted-key registry: admitting a key is a deliberate, reviewed,
-git-recorded act, separate from the runtime environment that produces a
-result, rather than an env var an operator sets for their own run. Until a
-second real party controls part of that registry, though, it delivers
-process separation and an auditable history, not third-party independence;
-a PASS today is still internal consistency, not independent validation.
+The trusted-key registry (`TRUSTED_KEYS.json`, written by `accessbench-env
+trust add-key` and printed by `trust list`) is the mechanism for admitting a
+key as a deliberate, reviewed, git-recorded act rather than an env var an
+operator sets for their own run. This repository ships no registry file and
+has admitted no key. Even once one exists, until a second real party controls
+part of it the registry delivers process separation and an auditable history,
+not third-party independence; a PASS today is internal consistency, not
+independent validation.
 
 ## When a replication fails
 
