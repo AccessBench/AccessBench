@@ -4,6 +4,22 @@ Versions follow semantic versioning. The catalog carries its own data
 versions (scenario v5, oracle v2, panel `accessbench-core-v2-development-600`);
 those move independently of the software version.
 
+## [Unreleased]
+
+- `TRUSTED_KEYS.json` removed from the repository. No key is admitted; every
+  result is self-signed by the operator who ran it, and `run --full` says so.
+  The registry mechanism (`trust add-key` / `trust list`, env-var override)
+  stays in the code for when an outside party holds part of it.
+- The AWS KMS sealed-bank track is documented as not in use: `boto3` leaves
+  the `production` extra and `requirements-lock.txt` (the `kms-aws` extra
+  remains opt-in), and the design, scope, integrity, validation, limits and
+  dictionary pages say the sealed pack and cloud key do not exist yet.
+- Legacy v0.1 files removed: `scenarios/` (family YAML and builders),
+  `scripts/.env.example`, and the retired `fig-headline.svg`.
+- README points at the core-v3 six-model batch on accessbench.io as
+  single-pass, unfrozen-harness evidence outside the results of record.
+- SECURITY.md no longer describes the repository as pre-1.0.
+
 ## [1.0.0] - 2026-08-26
 
 First public release: the runnable harness, the reviewed 600-case

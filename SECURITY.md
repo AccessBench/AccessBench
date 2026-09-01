@@ -34,5 +34,6 @@ those upstream).
 
 ## Supported versions
 
-This repository is pre-1.0 and under active development on `main`. Security
-fixes land on `main`; there is no separate maintenance branch yet.
+The supported version is the one in `VERSION` (1.0.0 at the first public
+cut), developed on `main`. Security fixes land on `main` and ship in the next
+release; there is no separate maintenance branch yet.

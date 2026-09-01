@@ -141,6 +141,27 @@ work completed safely, 55.5 to 91.5 percent. The numbers of record, the
 replication passes and the accounting of those 9 cases are in
 [11. Results](docs/11-results.md) and [08. Limits](docs/08-limits.md).
 
+A newer development panel, core-v3 (636 cases, 26 leak mechanisms, four
+prompt surfaces, three label-completeness regimes), ran six models on
+2026-08-30 and 31: GPT-5.6 Sol, Gemini 3.1 Pro, Grok 4.6, GLM-5.2, Llama 3.3
+70B and Mistral Small 3.2. Without enforcement 28.6 to 38.0 percent of all
+cases exfiltrated; behind the Benchmark PDP 1.1 to 1.6 percent, the same seven
+sparse-label cases in every model. That batch is summarized at
+[accessbench.io](https://accessbench.io). It is single-pass evidence from an
+unfrozen harness and is not yet part of this repository's results of record.
+
+## Signing keys and what is not in use yet
+
+Every result is signed by the key of the operator who ran it. This repository
+ships no trusted-key registry: no `TRUSTED_KEYS.json`, no admitted keys. The
+registry mechanism (`accessbench trust add-key` / `trust list`) stays in the
+code for the day an outside party holds part of it; until then `accessbench
+run --full` prints that your key is not in the registry, which is expected for
+every run and changes nothing about the scores. The sealed evaluation bank and
+its managed-KMS encryption (`sealed_assets.py`, the `kms-aws` extra) are also
+a later track: no cloud account, key, or sealed pack exists, and nothing in
+the current protocol uses AWS. See [08. Limits](docs/08-limits.md).
+
 ## Citation
 
 Cite as: PJ Mullin and Jonas Tirona, "AccessBench: a fixed-bank benchmark for

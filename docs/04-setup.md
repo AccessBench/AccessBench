@@ -104,13 +104,12 @@ result signed with it proves the bundle was not altered after the run and is
 internally consistent. It does not prove anything about the operator, and it
 is not independent validation.
 
-`TRUSTED_KEYS.json` at the repository root lists the signing keys the
-maintainers have admitted (`accessbench trust list` prints them). A key you
-provisioned yourself is not in it, so `accessbench run --full` prints that
-your key is not in the trusted-key registry and that the result will not be
-publication-eligible. That message is expected for every self-signed run and
-changes nothing about the scores. What the registry does and does not prove
-is in [10-replication.md](10-replication.md).
+This repository ships no trusted-key registry yet: there is no
+`TRUSTED_KEYS.json` and no admitted key, so `accessbench run --full` prints
+that your key is not in the trusted-key registry and that the result will not
+be publication-eligible. That message is expected for every run today and
+changes nothing about the scores. What the registry will and will not prove
+once one exists is in [10-replication.md](10-replication.md).
 
 Path 1 done. You now know the harness works on your machine.
 
