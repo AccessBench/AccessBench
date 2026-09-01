@@ -755,7 +755,7 @@ def fig_models(rows=None):
 
 
 FIGURES = {
-    "fig-headline.svg": fig_headline,
+    # fig_headline (one model behind Benchmark PDP v2) is retired: no page uses it.
     "fig-models.svg": fig_models,
     "fig-run.svg": fig_run,
     "fig-paired.svg": fig_paired,

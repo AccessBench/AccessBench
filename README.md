@@ -141,6 +141,25 @@ work completed safely, 55.5 to 91.5 percent. The numbers of record, the
 replication passes and the accounting of those 9 cases are in
 [11. Results](docs/11-results.md) and [08. Limits](docs/08-limits.md).
 
+A newer development panel, core-v3 (636 cases, 26 leak mechanisms, four
+prompt surfaces, three label-completeness regimes), ran six models on
+2026-08-30 and 31: GPT-5.6 Sol, Gemini 3.1 Pro, Grok 4.6, GLM-5.2, Llama 3.3
+70B and Mistral Small 3.2. Without enforcement 28.6 to 38.0 percent of all
+cases exfiltrated; behind the Benchmark PDP 1.1 to 1.6 percent, the same seven
+sparse-label cases in every model. That batch is summarized at
+[accessbench.io](https://accessbench.io). It is single-pass evidence from an
+unfrozen harness and is not yet part of this repository's results of record.
+
+## Signing keys
+
+`TRUSTED_KEYS.json` at the repository root is the maintainer-controlled
+registry of signing keys (`accessbench trust list` prints it). It is not a
+held-out bank and not independent validation. A result signed by a key that is
+not listed still verifies with `accessbench verify` and scores identically; the
+listing only records, in git, which keys the maintainers admitted, so that
+history is tamper-evident. No sealed or held-out evaluation bank exists; see
+[08. Limits](docs/08-limits.md).
+
 ## Citation
 
 Cite as: PJ Mullin and Jonas Tirona, "AccessBench: a fixed-bank benchmark for

@@ -37,7 +37,6 @@ The output is a working copy, never a source of truth, and `build/` is ignored.
 | `mark.svg` | square mark, for a favicon or an app icon |
 | `fig-run.svg` | README, one run end to end |
 | `fig-models.svg` | README and 11 Results, seven models behind Benchmark PDP v3 (the numbers of record) |
-| `fig-headline.svg` | retired, v2 era: one model (gpt-4o) behind Benchmark PDP v2; no page uses it |
 | `fig-paired.svg` | 01 Design, the paired experiment |
 | `fig-lifecycle.svg` | 01 Design, how one case runs |
 | `fig-seam.svg` | 02 Methodology, the enforcement seam |
